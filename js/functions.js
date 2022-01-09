@@ -55,8 +55,10 @@ function main(){
 
         if(legendaCorDaCaixa.innerText == transcricaoAudio){
             atualizarMemorias(1);
+            aplicarCorNaCaixa(sortearCor());
         }else{
             atualizarMemorias(-1);
+            aplicarCorNaCaixa(sortearCor());
         }  
     }   
 }
