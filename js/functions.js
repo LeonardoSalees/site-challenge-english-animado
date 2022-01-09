@@ -22,14 +22,14 @@ let speechAPI = window.SpeechRecognition || window.webkitSpeechRecognition;
 const GRAVADOR = new speechAPI();
 GRAVADOR.continuous = false;
 GRAVADOR.lang = 'en-US';
+GRAVADOR.interimResults = false;
+GRAVADOR.maxAlternatives = 1 ;
 let btnGravador = document.getElementById('btn-responder');
 const CAIXA_DAS_CORES = document.getElementById('caixa');
 let legendaCorDaCaixa = document.getElementById('cor-legenda');
 let pontuacao = document.getElementById('pontuacao-atual');
 
 function main(){
-    verificarCompatibilidadeNavegador();
-
     aplicarCorNaCaixa(sortearCor());
 
     btnGravador.addEventListener('click', function(e){
@@ -43,7 +43,7 @@ function main(){
         btnGravador.style.borderColor = legendaCorDaCaixa.innerText;
     }  
 
-    GRAVADOR.onend = function (){
+    GRAVADOR.onspeechend = function (){
         btnGravador.innerText = "RESPONDER";
         btnGravador.style.backgroundColor = 'transparent';
         btnGravador.style.color = 'white';
@@ -85,5 +85,6 @@ function verificarCompatibilidadeNavegador(){
     if (!window.SpeechRecognition && !window.webkitSpeechRecognition) return Window.alert('Seu Navegador não possui suporte para o site');
 }
 
+verificarCompatibilidadeNavegador();
 main();
 
