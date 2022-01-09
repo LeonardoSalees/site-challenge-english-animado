@@ -33,14 +33,14 @@ body{
     margin: 2px ;
     margin-left: 5%;   
     padding: 2px 30px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
 
     border-radius: 10px ;
 }
 .pontuacao-game img{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin-right: 5px;
 }
 .nome-jogo{
@@ -49,29 +49,30 @@ body{
 
     color: white;
 
-    margin-right: 20px;
+    margin-right: 100px;
 }
 /* end */
 /* Corpo style */
 .container{
-    height: auto;
+    height: 100%;
 }
 
 .corpo{
     background-color: #8470FF;
-    height: auto;
+    height: 100%;
     padding-top: 10px;
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 .esquerda{
     color:white;
 
     width: 40%;
-    height:100%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
@@ -83,21 +84,21 @@ body{
 
 .title{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 30px;
     text-align: center;     
 }
 
 .color-name{
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 25px;
     color: black;
     font-weight: 800;
 }
 
 .cor-atual{
     margin-top:10px;
-    height: 200px;
-    width: 200px;
+    height:250px;
+    width: 250px;
 
     border: 5px solid inherit;
     border-radius: 50%;
@@ -106,14 +107,14 @@ body{
 }
 
 .btn-responder{
-    margin-top: 50px;
+    margin-top: 25px;
     color: white;
     background-color: transparent;
 
     width:80%;
     padding: 5px;
 
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bolder;
 
     border: 2px solid   white;
@@ -125,10 +126,11 @@ body{
 
 .direita{
     width: 40%;
+    height: 100%;
 }
 
 .img-direita{
-    height: 400px;
+    height: 500px;
     width: 100%;
    
 }
@@ -142,9 +144,10 @@ body{
 .rodape{
     background-color: black;
 
-
+    height: 100px;
     display: flex;
     justify-content: center;
+    align-items: center;
 
-    padding: 10px;
+  
 }
