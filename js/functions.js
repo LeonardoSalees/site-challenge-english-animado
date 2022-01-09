@@ -82,7 +82,7 @@ function atualizarPontuacao(valor){
 }
 
 function verificarCompatibilidadeNavegador(){
-    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) return alert('Seu Navegador não possui suporte para o site');
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) return Window.alert('Seu Navegador não possui suporte para o site');
 }
 
 main();
