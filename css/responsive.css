@@ -1,0 +1,96 @@
+@media screen and (max-width: 900px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{ 
+        height: 100%;
+    }
+    
+    /* header */
+    
+    .pontuacao-game{
+        width: 45%;
+        justify-content: center;
+    }
+    .nome-jogo{
+        width: 50%;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+    .btn-responder{
+        font-size: 25px;
+    }
+    .rodape{
+        background-color: black;
+    
+        height: 100px;
+    }
+    .img-logo{
+        height: 60px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .cabecalho-principal{
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .nome-jogo{
+        width: 100%;
+    }
+    .pontuacao-game{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align:center;
+
+        width: 70%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .corpo{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .title{
+        margin-top: 5px;
+
+        width: 70%;
+        font-size: 23px;
+    }
+    .cor-atual{
+        width: 200px;
+        height: 200px;
+    }
+    .btn-responder{
+        width: 60%;
+
+    }
+    .esquerda{
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .direita{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2%;
+        height: auto;
+        width: 80%;
+    }
+    
+    .img-direita{
+        height: 50%;
+        width: 50%;
+        
+    }
+    
+}
+

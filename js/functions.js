@@ -13,7 +13,7 @@ let engine = {
         'white': '#FFFFFF',
         'gold': '#FFD700',
     },
-    "memorias" : 0
+    "pontuacao" : 0
 }
 
 const audioAlegria = new Audio('/audio/alegria.mp3');
@@ -54,10 +54,10 @@ function main(){
         let transcricaoAudio = event.results[0][0].transcript.toUpperCase(); 
 
         if(legendaCorDaCaixa.innerText == transcricaoAudio){
-            atualizarMemorias(1);
+            atualizarPontuacao(1);
             aplicarCorNaCaixa(sortearCor());
         }else{
-            atualizarMemorias(-1);
+            atualizarPontuacao(-1);
             aplicarCorNaCaixa(sortearCor());
         }  
     }   
@@ -75,10 +75,10 @@ function aplicarCorNaCaixa(nomeDaCor){
     CAIXA_DAS_CORES.style.backgroundColor = nomeDaCor;
 }
 
-function atualizarMemorias(valor){
+function atualizarPontuacao(valor){
     valor < 0 ? audioChoro.play() : audioAlegria.play();  
-    engine.memorias += valor;
-    pontuacao.innerText = engine.memorias;
+    engine.pontuacao += valor;
+    pontuacao.innerText = engine.pontuacao;
 }
 
 function verificarCompatibilidadeNavegador(){
