@@ -6,7 +6,7 @@
      Venha treinar seu inglês. Ajudamos pessoas a praticarem sua pronúncia em Inglês. 🐶
 </h3>
 <div align="center">
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2c4966f9-e3f2-49f1-b59f-4982a0d556ba/deploy-status)](https://app.netlify.com/sites/englishchallenge/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2c4966f9-e3f2-49f1-b59f-4982a0d556ba/deploy-status)](https://app.netlify.com/sites/englishchallenge/deploys)https://englishchallenge.netlify.app/
 </div>
 <h4 align="center">
 	🚧   Em Construção 🚀 🚧
