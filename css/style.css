@@ -18,7 +18,7 @@ body{
     align-items: center;
 
     width: auto;
-    height: auto;
+    height: 70px;
 
     
 
@@ -144,7 +144,7 @@ body{
 .rodape{
     background-color: black;
 
-    height: 100px;
+    height: 230px;
     display: flex;
     justify-content: center;
     align-items: center;
