@@ -159,6 +159,11 @@ body{
     align-items: center;
     text-align: center;
 }
+.img-result{
+    height: 100%;
+    display: 100%;
+}
+
 
 .title-result{
     color:black;
