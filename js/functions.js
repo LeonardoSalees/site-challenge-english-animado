@@ -29,7 +29,7 @@ const CAIXA_DAS_CORES = document.getElementById('caixa');
 let legendaCorDaCaixa = document.getElementById('cor-legenda');
 let pontuacao = document.getElementById('pontuacao-atual');
 
-let tituloAcertouErrou = document.querySelector('#title-result');
+let tituloAcertouErrou = document.getElementById('title-result');
 let transcricaoIntoText = document.getElementById('result-audio');
 const DIV_CENTRAL = document.getElementById('center');
 let btnNext = document.getElementById('btn-next-color');
@@ -61,25 +61,25 @@ function main(){
         
     GRAVADOR.onresult = function (event){
         let transcricaoAudio = event.results[0][0].transcript.toUpperCase(); 
-
+        btnGravador.style.display = 'none';
         if (DIV_CENTRAL.style.display = 'none'){
             DIV_CENTRAL.style.display = 'flex';
         }
         
         if(legendaCorDaCaixa.innerText == transcricaoAudio){
             atualizarPontuacao(1);
-            aplicarCorNaCaixa(sortearCor());
             quandoAcertar();
             conteudoAposResultAcertou(transcricaoAudio);
         }else{
             atualizarPontuacao(-1);
-            aplicarCorNaCaixa(sortearCor());
             quandoErrar();
             conteudoAposResultErrou(transcricaoAudio);
         }  
         
         btnNext.addEventListener('click', function(){
             aplicarCorNaCaixa(sortearCor());
+            btnGravador.style.display = 'flex';
+            IMG_CONTAINER_DIREITA.setAttribute('src', 'img/alegria-tristeza.png' );
             if (DIV_CENTRAL.style.display = 'flex'){
                 DIV_CENTRAL.style.display = 'none';
             }else{
@@ -111,6 +111,7 @@ function atualizarPontuacao(valor){
 function verificarCompatibilidadeNavegador(){
     if (!window.SpeechRecognition && !window.webkitSpeechRecognition) return Window.alert('Seu Navegador não possui suporte para o site');
 }
+
 // RESULTADO
 
 function conteudoAposResultAcertou(transcript){
@@ -125,31 +126,32 @@ function conteudoAposResultErrou(transcript){
     btnNext.innerText = "PRÓXIMA COR";
 }
 
-function configDivAcertou(){
-    let srcImgErrou = '/img/joy.png';
-    let className =  'img-result';
+function setDivResult(acertouOuErrou){
+    let srcImgAcertou = '/img/joy.png' ;
+    let srcImgErrou = '/img/sadness.png';
+    let classNameImgResult =  'img-result';
     let classNameBtnNext = 'btn-next';
+    let tituloResultado = 'title-result';
+    let textoResultado = 'text-result';
 
-    IMG_CONTAINER_DIREITA.setAttribute('src', srcImgErrou );
-    IMG_CONTAINER_DIREITA.setAttribute('class', className );
+    if (acertouOuErrou == 'acertou'){
+        IMG_CONTAINER_DIREITA.setAttribute('src', srcImgAcertou);
+    }else if (acertouOuErrou == 'errou'){
+        IMG_CONTAINER_DIREITA.setAttribute('src', srcImgErrou);
+    }
+    IMG_CONTAINER_DIREITA.setAttribute('class', classNameImgResult );
+    DIV_CENTRAL.setAttribute('class', 'center');
+    tituloAcertouErrou.setAttribute('class', tituloResultado)
+    transcricaoIntoText.setAttribute('class', textoResultado )
     btnNext.setAttribute('class', classNameBtnNext);
-}
 
-function configDivErrou(){
-    let srcImgAcertou = '/img/sadness.png';
-    let className =  'img-result';
-    let classNameBtnNext = 'btn-next';
-
-    IMG_CONTAINER_DIREITA.setAttribute('src', srcImgAcertou);
-    IMG_CONTAINER_DIREITA.setAttribute('class', className );
-    btnNext.setAttribute('class', classNameBtnNext);
 }
 
 function quandoErrar(){
-    configDivErrou();
+    setDivResult('errou')
 }
 function quandoAcertar(){
-    configDivAcertou(); 
+    setDivResult('acertou');
 }
 
 verificarCompatibilidadeNavegador();

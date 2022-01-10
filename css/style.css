@@ -54,23 +54,27 @@ body{
 /* Corpo style */
 .container{
     height: 100%;
+    width: 100%;
 }
 
 .corpo{
     background-color: #8470FF;
     height: 100%;
+    width: 100%;
     padding-top: 10px;
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    padding-bottom: 50px;
 }
 
 .esquerda{
     color:white;
 
-    width: 40%;
+    width: 33%;
     height: 100%;
 
     display: flex;
@@ -112,32 +116,31 @@ body{
 
     width:80%;
     padding: 5px;
-
     font-size: 30px;
     font-weight: bolder;
-
     border: 2px solid   white;
     border-radius: 5px;
-
+    justify-content: center;
+    text-align: center;
     cursor: pointer;
     
 }
 
 .direita{
-    width: 40%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 90%;
 }
 
 .img-direita{
-    height: 500px;
-    width: 100%;
+    height: 80%;
+    width: 80%;
    
 }
 
-.img-result{
-    height: 100%;
-    width: 100%;  
-}
 /* end */
 /* rodapé */
 .rodape{
@@ -153,20 +156,26 @@ body{
 /* resultado */
 .center{
     width: flex;
-    height:50%;
+    height:100%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 .img-result{
-    height: 100%;
-    display: 100%;
+    width: 70%;
 }
 
 
 .title-result{
     color:black;
+    font-size: 40px ;
+}
+
+.text-result{
+    font-size: 30px;
+    color: white;
 }
 
 .btn-next{
@@ -174,16 +183,17 @@ body{
     background-color: black;
 
     display: flex;
-    width:80%;
+    width:70%;
     padding: 5px;
     margin-top: 10px;
     justify-content: center;
 
-    font-size: 10px;
+    font-size: 20px;
     font-weight: bolder;
 
     border: 1px solid white;
     border-radius: 5px;
+    transition: 3s;
 
     cursor: pointer;
 }
