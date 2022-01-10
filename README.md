@@ -19,8 +19,8 @@ https://englishchallenge.netlify.app/
 - [x]  interação via comando de voz
 - [x]  receber pontuação por acerto
 - [x]  11 cores diferente
-- [ ]  resultado ( saber se você acertou ou errou com base em texto, e a transcrição do que foi dito).
-- [ ]  ao acertar ver apenas a imagem da joy
+- [x]  resultado ( saber se você acertou ou errou com base em texto, e a transcrição do que foi dito).
+- [x]  ao acertar ver apenas a imagem da joy; ao errar sadness;
 - [ ]  tema do mario
 
 ### 🛠 Tecnologias
