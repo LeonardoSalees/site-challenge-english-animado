@@ -29,11 +29,20 @@ const CAIXA_DAS_CORES = document.getElementById('caixa');
 let legendaCorDaCaixa = document.getElementById('cor-legenda');
 let pontuacao = document.getElementById('pontuacao-atual');
 
+let tituloAcertouErrou = document.querySelector('#title-result');
+let transcricaoIntoText = document.getElementById('result-audio');
+const DIV_CENTRAL = document.getElementById('center');
+let btnNext = document.getElementById('btn-next-color');
+let divDireita = document.getElementById('direita');
+let divEsquerda = document.getElementById('esquerda');
+const IMG_CONTAINER_DIREITA = document.querySelector('#img');
+
 function main(){
     aplicarCorNaCaixa(sortearCor());
 
     btnGravador.addEventListener('click', function(e){
         GRAVADOR.start() ;
+        
     });
 
     GRAVADOR.onstart = function (){
@@ -53,13 +62,31 @@ function main(){
     GRAVADOR.onresult = function (event){
         let transcricaoAudio = event.results[0][0].transcript.toUpperCase(); 
 
+        if (DIV_CENTRAL.style.display = 'none'){
+            DIV_CENTRAL.style.display = 'flex';
+        }
+        
         if(legendaCorDaCaixa.innerText == transcricaoAudio){
             atualizarPontuacao(1);
             aplicarCorNaCaixa(sortearCor());
+            quandoAcertar();
+            conteudoAposResultAcertou(transcricaoAudio);
         }else{
             atualizarPontuacao(-1);
             aplicarCorNaCaixa(sortearCor());
+            quandoErrar();
+            conteudoAposResultErrou(transcricaoAudio);
         }  
+        
+        btnNext.addEventListener('click', function(){
+            aplicarCorNaCaixa(sortearCor());
+            if (DIV_CENTRAL.style.display = 'flex'){
+                DIV_CENTRAL.style.display = 'none';
+            }else{
+                DIV_CENTRAL.style.display = 'flex';
+            }
+            
+        });
     }   
 }
 
@@ -83,6 +110,46 @@ function atualizarPontuacao(valor){
 
 function verificarCompatibilidadeNavegador(){
     if (!window.SpeechRecognition && !window.webkitSpeechRecognition) return Window.alert('Seu Navegador não possui suporte para o site');
+}
+// RESULTADO
+
+function conteudoAposResultAcertou(transcript){
+    tituloAcertouErrou.innerText  = "VOCÊ ACERTOU, VOCÊ PRONUNCIOU:";
+    transcricaoIntoText.innerText = '"' +(transcript) + '"';  
+    btnNext.innerText = "PRÓXIMA COR";
+}
+
+function conteudoAposResultErrou(transcript){
+    tituloAcertouErrou.innerText  = "VOCÊ ERROU, VOCÊ PRONUNCIOU:";
+    transcricaoIntoText.innerText = '"' +(transcript) + '"';  
+    btnNext.innerText = "PRÓXIMA COR";
+}
+
+function configDivAcertou(){
+    let srcImgErrou = '/img/joy.png';
+    let className =  'img-result';
+    let classNameBtnNext = 'btn-next';
+
+    IMG_CONTAINER_DIREITA.setAttribute('src', srcImgErrou );
+    IMG_CONTAINER_DIREITA.setAttribute('class', className );
+    btnNext.setAttribute('class', classNameBtnNext);
+}
+
+function configDivErrou(){
+    let srcImgAcertou = '/img/sadness.png';
+    let className =  'img-result';
+    let classNameBtnNext = 'btn-next';
+
+    IMG_CONTAINER_DIREITA.setAttribute('src', srcImgAcertou);
+    IMG_CONTAINER_DIREITA.setAttribute('class', className );
+    btnNext.setAttribute('class', classNameBtnNext);
+}
+
+function quandoErrar(){
+    configDivErrou();
+}
+function quandoAcertar(){
+    configDivAcertou(); 
 }
 
 verificarCompatibilidadeNavegador();
