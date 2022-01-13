@@ -22,7 +22,8 @@ https://englishchallenge.netlify.app/
 - [x]  resultado ( saber se você acertou ou errou com base em texto, e a transcrição do que foi dito).
 - [x]  ao acertar ver apenas a imagem da joy; ao errar sadness;
 - [x]  tema do mario;
-- [ ]  tema monstros SA;
+- [x]  tema monstros SA;
+- [x]  Ouvir pronúncia da Cor;
 
 ### 🛠 Tecnologias
 
