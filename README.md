@@ -15,13 +15,14 @@ https://englishchallenge.netlify.app/
 ## ⚙️ Funcionalidades
 
 - [x]  versão web
-- [ ]  versão mobile
+- [x]  versão mobile
 - [x]  interação via comando de voz
 - [x]  receber pontuação por acerto
 - [x]  11 cores diferente
 - [x]  resultado ( saber se você acertou ou errou com base em texto, e a transcrição do que foi dito).
 - [x]  ao acertar ver apenas a imagem da joy; ao errar sadness;
-- [ ]  tema do mario
+- [x]  tema do mario;
+- [ ]  tema monstros SA;
 
 ### 🛠 Tecnologias
 
