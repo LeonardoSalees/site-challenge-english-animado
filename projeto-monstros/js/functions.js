@@ -57,7 +57,7 @@ function main(){
     GRAVADOR.onspeechend = function (){
         btnGravador.innerText = "RESPONDER";
         btnGravador.style.backgroundColor = 'transparent';
-        btnGravador.style.color = 'white';
+        btnGravador.style.color = 'black';
         btnGravador.style.borderColor = 'inherit';
     }
         
