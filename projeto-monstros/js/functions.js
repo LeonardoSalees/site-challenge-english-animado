@@ -37,6 +37,8 @@ let divDireita = document.getElementById('direita');
 let divEsquerda = document.getElementById('esquerda');
 const IMG_CONTAINER_DIREITA = document.querySelector('#img');
 
+let btnSpeech = document.getElementById('btn-speech');
+
 function main(){
     aplicarCorNaCaixa(sortearCor());
 
@@ -87,6 +89,9 @@ function main(){
             }
             
         });
+        btnSpeech.addEventListener('click', function(){
+            pronunciarLegenda(legendaCorDaCaixa.innerText);
+        })
     }   
 }
 
@@ -152,6 +157,18 @@ function quandoErrar(){
 }
 function quandoAcertar(){
     setDivResult('acertou');
+}
+
+function pronunciarLegenda() {
+    var msg = new SpeechSynthesisUtterance();
+    
+    msg.voiceURI = "";
+    msg.volume = 2;
+    msg.rate = 0.7;
+    msg.text = legendaCorDaCaixa.innerText;
+    msg.pitch = 0.7;
+    msg.lang = 'en-US';
+    speechSynthesis.speak(msg);
 }
 
 verificarCompatibilidadeNavegador();

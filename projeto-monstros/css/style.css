@@ -218,6 +218,23 @@ a, a:hover, a:focus, a:active {
     display: flex;
     flex-direction: column;
 
-    
-    
+}
+.btn-speech{
+    margin-top: 5px;
+    color: white;
+    margin-bottom: 10px;
+    background-color: transparent;
+
+    width:30%;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bolder;
+    border: 2px solid   white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-speech:hover{
+    background-color: black;
+    transition: 1s ease;
 }

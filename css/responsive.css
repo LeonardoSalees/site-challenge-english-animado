@@ -85,6 +85,10 @@
         height: auto;
         width: 90%;
     }
+    .img-result{
+        height: 100%;
+        width: 100%;
+    }
     
     .img-direita{
         height: 80%;
