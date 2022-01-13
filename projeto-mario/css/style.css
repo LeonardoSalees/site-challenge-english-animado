@@ -5,14 +5,18 @@
 }
 body{ 
     height: 100%;
+    
 }
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
 
-/* header */
 
+/* header */
+.container{
+    height: 100%;
+}
 .cabecalho-principal{
     background-color: black;
 
@@ -22,13 +26,10 @@ a, a:hover, a:focus, a:active {
 
     width: auto;
     height: 70px;
-
-    
-
 }
 .pontuacao-game{
-    background-color: white ;
-    color: black;
+    background-color: rgb(103, 188, 228) ;
+    color: white;
 
     display: flex;
     align-items: center;
@@ -44,7 +45,7 @@ a, a:hover, a:focus, a:active {
 .pontuacao-game img{
     width: 30px;
     height: 30px;
-    margin-right: 5px;
+    margin-right: 5px;;
 }
 .nome-jogo{
     font-size: 30px;
@@ -62,7 +63,8 @@ a, a:hover, a:focus, a:active {
 }
 
 .corpo{
-    background-color: #8470FF;
+    background-color: rgb(255, 73, 73);
+
     height: 100%;
     width: 100%;
     padding-top: 10px;
@@ -73,8 +75,8 @@ a, a:hover, a:focus, a:active {
     align-items: center;
 
     padding-bottom: 50px;
-}
 
+}
 .esquerda{
     color:white;
 
@@ -86,16 +88,15 @@ a, a:hover, a:focus, a:active {
     
     justify-self: center;
     align-items: center;
-    
 }
-
 .title{
+    
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     text-align: center;     
 }
-
 .color-name{
+    
     margin-top: 10px;
     font-size: 25px;
     color: black;
@@ -103,16 +104,16 @@ a, a:hover, a:focus, a:active {
 }
 
 .cor-atual{
-    margin-top:10px;
-    height:250px;
+    margin-top: 5px;
+    height: 250px;
     width: 250px;
 
-    border: 5px solid inherit;
-    border-radius: 50%;
-    box-shadow: inset 0px 0px 5px#fff, 0px 0px 20px#fff;
+    border: 5px solid black;
+    border-radius: 7px;
 
+    background-image: url('/projeto-mario/img/caixa-fechada.png');
+    background-size: 100%;
 }
-
 .btn-responder{
     margin-top: 25px;
     color: white;
@@ -128,6 +129,7 @@ a, a:hover, a:focus, a:active {
     text-align: center;
     cursor: pointer;
     
+    
 }
 
 .direita{
@@ -138,15 +140,13 @@ a, a:hover, a:focus, a:active {
     width: 33%;
     height: 100%;
 }
-
 .img-direita{
     height: 100%;
     width: 100%;
    
 }
-
 /* end */
-/* rodapé */
+/* rodapé */    
 .rodape{
     background-color: black;
 
@@ -168,7 +168,7 @@ a, a:hover, a:focus, a:active {
     text-align: center;
 }
 .img-result{
-    size: 90%;
+    width: 70%;
 }
 
 
@@ -203,7 +203,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .temas{
-    background-color: #8470FF ;
+    background-color: rgb(255, 73, 73);
     height: 100px;
 }
 .titulo-temas{
@@ -213,9 +213,9 @@ a, a:hover, a:focus, a:active {
 }
 .lista-temas {
     margin-left: 50px;
-    color: rgb(255, 0, 0);
+    color: #8470FF;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: bolder;
     display: flex;
     flex-direction: column;
     text-decoration: none;

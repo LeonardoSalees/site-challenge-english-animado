@@ -1,4 +1,4 @@
-let engine = {
+var engine = {
     "cores":['green','purple', 'pink', 'red', 'yellow', 'orange', 'gray', 'black', 'blue', 'white', 'gold' ],
     "hexadecimais":{
         'green': '#02EF00',
@@ -12,15 +12,14 @@ let engine = {
         'blue': '#0000FF',
         'white': '#FFFFFF',
         'gold': '#FFD700',
-    },
+    }, 
     "pontuacao" : 0
 }
-
-const audioAlegria = new Audio('/audio/alegria.mp3');
-const audioChoro = new Audio('/audio/choro.mp3');
+const audioAcerto = new Audio('/projeto-mario/audio/moeda.mp3');
+const audioErro = new Audio('/projeto-mario/audio/errou.mp3');
 let speechAPI = window.SpeechRecognition || window.webkitSpeechRecognition;
 const GRAVADOR = new speechAPI();
-GRAVADOR.continuous = false
+GRAVADOR.continuous = false;
 GRAVADOR.lang = 'en-US';
 GRAVADOR.interimResults = false;
 GRAVADOR.maxAlternatives = 1 ;
@@ -79,7 +78,7 @@ function main(){
         btnNext.addEventListener('click', function(){
             aplicarCorNaCaixa(sortearCor());
             btnGravador.style.display = 'flex';
-            IMG_CONTAINER_DIREITA.setAttribute('src', 'img/alegria-tristeza.png' );
+            IMG_CONTAINER_DIREITA.setAttribute('src', '/projeto-mario/img/mario.png' );
             if (DIV_CENTRAL.style.display = 'flex'){
                 DIV_CENTRAL.style.display = 'none';
             }else{
@@ -103,7 +102,7 @@ function aplicarCorNaCaixa(nomeDaCor){
 }
 
 function atualizarPontuacao(valor){
-    valor < 0 ? audioChoro.play() : audioAlegria.play();  
+    valor < 0 ? audioErro.play() : audioAcerto.play();  
     engine.pontuacao += valor;
     pontuacao.innerText = engine.pontuacao;
 }
@@ -127,8 +126,8 @@ function conteudoAposResultErrou(transcript){
 }
 
 function setDivResult(acertouOuErrou){
-    let srcImgAcertou = '/img/joy.png' ;
-    let srcImgErrou = '/img/sadness.png';
+    let srcImgAcertou = '/projeto-mario/img/mariowin.png' ;
+    let srcImgErrou = '/projeto-mario/img/marioerrou.png';    
     let classNameImgResult =  'img-result';
     let classNameBtnNext = 'btn-next';
     let tituloResultado = 'title-result';
@@ -156,4 +155,3 @@ function quandoAcertar(){
 
 verificarCompatibilidadeNavegador();
 main();
-
