@@ -83,17 +83,23 @@
         align-items: center;
         margin-bottom: 2%;
         height: auto;
-        width: 80%;
+        width: 90%;
     }
     
     .img-direita{
-        height: 50%;
-        width: 50%;
+        height: 80%;
+        width: 80%;
         
     }
     .btn-next{
         width: 100%;
     }
+    .temas{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    
     
 }
 

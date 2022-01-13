@@ -5,6 +5,7 @@
 }
 body{ 
     height: 100%;
+    
 }
 a, a:hover, a:focus, a:active {
     text-decoration: none;
@@ -62,7 +63,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .corpo{
-    background-color: #8470FF;
+    background-color: rgba(68, 98, 231, 0.795);
     height: 100%;
     width: 100%;
     padding-top: 10px;
@@ -105,12 +106,10 @@ a, a:hover, a:focus, a:active {
 .cor-atual{
     margin-top:10px;
     height:250px;
-    width: 250px;
+    width: 350px;
 
     border: 5px solid inherit;
-    border-radius: 50%;
     box-shadow: inset 0px 0px 5px#fff, 0px 0px 20px#fff;
-
 }
 
 .btn-responder{
@@ -168,7 +167,8 @@ a, a:hover, a:focus, a:active {
     text-align: center;
 }
 .img-result{
-    size: 90%;
+    height: 90%;
+    width: 100%;
 }
 
 
@@ -202,8 +202,8 @@ a, a:hover, a:focus, a:active {
     cursor: pointer;
 }
 
-.temas{
-    background-color: #8470FF ;
+.temas{  
+    background-color: rgba(68, 98, 231, 0.795) ;   
 }
 .titulo-temas{
     display: flex;
@@ -217,5 +217,7 @@ a, a:hover, a:focus, a:active {
     font-weight: 700;
     display: flex;
     flex-direction: column;
-    text-decoration: none;
+
+    
+    
 }

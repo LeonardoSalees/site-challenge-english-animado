@@ -204,7 +204,7 @@ a, a:hover, a:focus, a:active {
 
 .temas{
     background-color: rgb(255, 73, 73);
-    height: 100px;
+    
 }
 .titulo-temas{
     display: flex;

@@ -10,32 +10,32 @@
     <!-- Script -->
     <script src="js/functions.js" defer ></script>
 
-    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     
-    <title> Mario | Challenge English</title>
-</head> 
+    <title>Monstros SA | Challenge English</title>
+</head>
 <body>
     <div class="container">
         <header class="cabecalho-principal">
             <div class="pontuacao-game">
-                <img src="img/moeda.png" alt="" srcset="">
-                <p class="point-name">Moedas =&nbsp</p>
-                <span class="point-value" id="pontuacao-atual">0</span>
+                <img src="img/pontuacao.png" alt="" srcset="">
+                <p class="point-name">Portas =&nbsp</p><span class="point-value" id="pontuacao-atual">0</span>
             </div>
-            <div class="nome-jogo">
-                <p>Super Mario English Challenge</p>
+            <div id="nome-jogo" class="nome-jogo">
+                <p>Monstros SA English Challenge</p>
             </div>
         </header>
         <section class="corpo">
             <div id="esquerda" class="esquerda">
                 <h1 class="title">FALE O NOME DA COR EM INGLÊS</h1>
                 <span id="cor-legenda" class="color-name"></span>
-                <div id="caixa" class="cor-atual">
+                <div >
+                    <img id="caixa" class="cor-atual" src="/projeto-monstros/img/porta.png" alt="">
                 </div>
                 <button id="btn-responder" class="btn-responder">RESPONDER</button>
             </div>
             <div id="direita" class="direita">
-                <img id="img" class="img-direita" src="img/mario.png" alt="" srcset="">
+                <img id="img" class="img-direita" src="/projeto-monstros/img/banner.png" alt="" srcset="">
             </div>
             <div id="center">
                 <span id="title-result" ></span>
@@ -47,16 +47,17 @@
             <div class="titulo-temas">
                 <h1>TEMAS DISPONÍVEIS</h1>
             </div>
-            <div>
+            <div class="">
                 <ul class="lista-temas">
+                    <li> <a href="/projeto-mario/index.html">Super Mario</a></li>
                     <li> <a href="/index.html">Divertidamente</a></li>
-                    <li> <a href="/projeto-monstros/index.html">Monstros SA</a></li>
+                    
                 </ul>
             </div>
         </div>
         <footer class="rodape">
             <div>
-                <img class="img-logo" height="150px" src="img/logo-dio.png" alt="">
+                <img class="img-logo" height="150px" src="/img/logo-dio.png" alt="">
             </div>
         </footer>
     </div>
