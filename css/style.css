@@ -173,17 +173,11 @@ section#themes ul li a:hover {
 section#result {
   display: none;
 }
-section#result.result body {
-  overflow: hidden;
-}
-.result {
-  overflow: hidden;
-}
-.scrollnone {
+body.scrollnone {
   overflow: hidden;
 }
 section#result.result {
-  padding-top: 5rem;
+  padding-top: 15rem;
   display: flex;
   position: fixed;
   top: 0;

@@ -92,6 +92,7 @@ function main() {
     btnNext.addEventListener('click', function () {
       aplicarCorNaCaixa(sortearCor())
       resultSection.style.display = 'none'
+      body.classList.remove('scrollnone')
     })
     btnSpeech.addEventListener('click', function () {
       pronunciarLegenda(legendaCorDaCaixa.innerText)
