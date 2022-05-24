@@ -146,11 +146,11 @@ section#themes {
   display: flex;
   justify-content: center;
 
-  margin: 0 auto;
+  margin-inline: auto;
   height: 20rem;
   width: 30.5rem;
 
-  margin-top: 3rem;
+  margin-block: 3rem;
 
   background-color: var(--bck-color);
 }
