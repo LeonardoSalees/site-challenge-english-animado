@@ -177,7 +177,7 @@ body.scrollnone {
   overflow: hidden;
 }
 section#result.result {
-  padding-top: 15rem;
+  padding-top: 10rem;
   display: flex;
   position: fixed;
   top: 0;
