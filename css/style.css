@@ -148,13 +148,14 @@ body.scrollnone {
   overflow: hidden;
 }
 section#result.result {
-  padding-top: 10rem;
+  padding-top: 5rem;
   position: fixed;
   top: 0;
   left: 0;
   background-color: white;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 }
 section#result .title-result {
   font-size: 5rem;
@@ -165,7 +166,7 @@ section#result .content {
   align-items: center;
 }
 section#result .img-result {
-  width: 50%;
+  width: 15rem;
 }
 section#result .btn-next {
   font-size: 3rem;
