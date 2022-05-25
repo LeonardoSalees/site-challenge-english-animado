@@ -28,8 +28,8 @@ let engine = {
   pontuacao: 0
 }
 
-const audioAlegria = new Audio('/audio/alegria.mp3')
-const audioChoro = new Audio('/audio/choro.mp3')
+const audioAlegria = new Audio('./assets/audio-divertidamente/alegria.mp3')
+const audioChoro = new Audio('/assets/audio-divertidamente/choro.mp3')
 let speechAPI = window.SpeechRecognition || window.webkitSpeechRecognition
 const GRAVADOR = new speechAPI()
 GRAVADOR.continuous = false
@@ -65,7 +65,7 @@ function main() {
 
   GRAVADOR.onspeechend = function () {
     btnGravador.innerText = 'RESPONDER'
-    btnGravador.style.backgroundColor = 'transparent'
+    btnGravador.style.backgroundColor = 'black'
     btnGravador.style.color = 'white'
     btnGravador.style.borderColor = 'inherit'
   }
@@ -134,8 +134,8 @@ function conteudoAposResultErrou() {
 }
 
 function setDivResult(acertouOuErrou) {
-  let srcImgAcertou = './img/joy.png'
-  let srcImgErrou = './img/sadness.png'
+  let srcImgAcertou = './assets/img-divertidamente/joy.png'
+  let srcImgErrou = './assets/img-divertidamente/sadness.png'
   let classNameImgResult = 'img-result'
   let classNameBtnNext = 'btn-next'
   let tituloResultado = 'title-result'

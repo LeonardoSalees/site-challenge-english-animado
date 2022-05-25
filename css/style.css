@@ -15,7 +15,7 @@
   --bck-color: hsl(var(--hue), 90%, 65%);
 
   --nav-height: 15rem;
-  --footer-height: 10rem;
+  --footer-height: 5rem;
 }
 
 html {
@@ -118,7 +118,7 @@ nav#navigation img {
 
 /* ============= APP =========== */
 section#app {
-  padding-top: var(--nav-height);
+  padding-top: calc(var(--nav-height) + 2rem);
 }
 
 section#app .content {
@@ -140,35 +140,6 @@ section#app .wrapper header {
   justify-content: center;
 }
 
-/* ============= THEMES =========== */
-
-section#themes {
-  display: flex;
-  justify-content: center;
-
-  margin-inline: auto;
-  height: 20rem;
-  width: 30.5rem;
-
-  margin-block: 3rem;
-
-  background-color: var(--bck-color);
-}
-section#themes ul {
-  padding-bottom: calc(var(--footer-heigth)+20rem);
-}
-section#themes ul li {
-  padding-bottom: 2rem;
-}
-section#themes ul li a {
-  font-size: 2rem;
-  padding-bottom: 2rem;
-  text-decoration: none;
-}
-section#themes ul li a:hover {
-  text-decoration: none;
-  color: red;
-}
 /* ============= RESULT =========== */
 section#result {
   display: none;
@@ -178,7 +149,6 @@ body.scrollnone {
 }
 section#result.result {
   padding-top: 10rem;
-  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -195,7 +165,7 @@ section#result .content {
   align-items: center;
 }
 section#result .img-result {
-  width: 10rem;
+  width: 50%;
 }
 section#result .btn-next {
   font-size: 3rem;
@@ -212,10 +182,10 @@ footer {
   align-items: center;
 
   background-color: var(--secondary-color);
-  height: var(--footer-height);
   width: 100%;
   position: fixed;
   bottom: 0;
+  height: var(--footer-height);
 }
 footer p {
   color: white;
